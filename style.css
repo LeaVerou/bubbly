@@ -1,0 +1,76 @@
+html {
+	
+}
+
+body {
+	max-width: 60em;
+	padding: 2em;
+	margin: auto;
+}
+
+#code {
+	display: block;
+	float: right;
+	width: 25em;
+	padding: 1em;
+	background: #ffe;
+	font-family: Consolas, Monaco, monospace;
+	white-space: pre;
+	overflow: auto;
+	text-shadow: 0 1px 1px white;
+}
+
+@media (max-width: 810px) {
+	#code {
+		float: none;
+	}
+}
+
+.speech-bubble {
+	width: 260px;
+	padding: 60px 20px;
+	margin: 1em 0;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 200%;
+	text-shadow: 0 -.05em .1em rgba(0,0,0,.3);
+}
+
+	.speech-bubble h1 {
+		margin: 0;
+		font-size: 150%;
+		font-family: sniglet;
+	}
+	
+	.speech-bubble h2 {
+		margin: 0;
+		font-size: 40%;
+		font-weight: normal;
+	}
+
+input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+input[type="radio"] + label {
+	display: inline-block;
+	width: 60px;
+	height: 40px;
+	margin-right: 15px;
+	color: transparent;
+}
+
+input[type="radio"]:checked + label {
+	
+}
+
+input[type="radio"]:checked + label:before {
+	content: '✓';
+	position: absolute;
+	left: 0; right: 0;
+	color: white;
+	text-align: center;
+	font-size: 200%;
+}

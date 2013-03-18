@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<title>Bubbly — CSS speech bubbles made easy</title>
+<link rel="stylesheet" href="style.css" />
+<style id="labels"></style>
+</head>
+<body>
+
+<style id="code" contenteditable></style>
+
+<hgroup class="speech-bubble">
+	<h1>Bubbly</h1>
+	<h2>CSS speech bubbles made easy!</h2>
+</hgroup>
+
+<section>
+	<h1>Side</h1>
+	
+	<input type="radio" name="side" value="top" id="side-top" />
+	<label for="side-top">Top</label>
+	
+	<input type="radio" name="side" value="right" id="side-right" />
+	<label for="side-right">Right</label>
+	
+	<input type="radio" name="side" value="bottom" id="side-bottom" checked />
+	<label for="side-bottom">Bottom</label>
+	
+	<input type="radio" name="side" value="left" id="side-left" />
+	<label for="side-left">Left</label>
+</section>
+
+<section>
+	<h1>Pointer triangle</h1>
+	
+	<input type="radio" name="triangle" value="symmetrical" id="triangle-symmetrical" />
+	<label for="triangle-symmetrical">Symmetrical</label>
+	
+	<input type="radio" name="triangle" value="right" id="triangle-right" />
+	<label for="triangle-right">Right</label>
+	
+	<input type="radio" name="triangle" value="left" id="triangle-left" checked />
+	<label for="triangle-left">Left</label>
+</section>
+
+<section>
+	<h1>Pointer size</h1>
+	
+	<input type="range" min="2" max="100" value="20" name="size" id="size" />
+	
+	<label>
+		<input type="checkbox" name="ems" id="ems" />
+		Use ems
+	</label>
+</section>
+
+<section>
+	<h1>Background color</h1>
+	
+	<input type="color" id="color" value="#00aabb" />
+</section>
+
+<footer></footer>
+
+<script src="utopia.js"></script>
+<script src="bubbly.js"></script>
+
+</body>
+</html>
