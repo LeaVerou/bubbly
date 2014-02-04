@@ -4,8 +4,6 @@ function changeValue(who){
 	update();
 }
 
-var exColor, exRe;
-
 function update() {
 	var side = getRadioValue('side'),
 	    triangle = getRadioValue('triangle');
