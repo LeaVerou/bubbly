@@ -18,38 +18,38 @@
 
 <section>
 	<h1>Side</h1>
-	
+
 	<input type="radio" name="side" value="top" id="side-top" />
 	<label for="side-top">Top</label>
-	
+
 	<input type="radio" name="side" value="right" id="side-right" />
 	<label for="side-right">Right</label>
-	
+
 	<input type="radio" name="side" value="bottom" id="side-bottom" checked />
 	<label for="side-bottom">Bottom</label>
-	
+
 	<input type="radio" name="side" value="left" id="side-left" />
 	<label for="side-left">Left</label>
 </section>
 
 <section>
 	<h1>Pointer triangle</h1>
-	
+
 	<input type="radio" name="triangle" value="symmetrical" id="triangle-symmetrical" />
 	<label for="triangle-symmetrical">Symmetrical</label>
-	
+
 	<input type="radio" name="triangle" value="right" id="triangle-right" />
 	<label for="triangle-right">Right</label>
-	
+
 	<input type="radio" name="triangle" value="left" id="triangle-left" checked />
 	<label for="triangle-left">Left</label>
 </section>
 
 <section>
 	<h1>Pointer size</h1>
-	
+
 	<input type="range" min="2" max="100" value="20" name="size" id="size" />
-	
+
 	<label>
 		<input type="checkbox" name="ems" id="ems" />
 		Use ems
@@ -58,8 +58,8 @@
 
 <section>
 	<h1>Background color</h1>
-	
-	<input type="color" id="color" value="#00aabb" />
+	<input type="color" id="picker_color" value="#00aabb" onchange="changeValue('color')" />
+	<input type="text" id="color" value="#00aabb" maxlength="7" onchange="changeValue('picker')" />
 </section>
 
 <footer></footer>

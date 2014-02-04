@@ -1,5 +1,5 @@
 html {
-	
+
 }
 
 body {
@@ -42,7 +42,7 @@ body {
 		font-size: 150%;
 		font-family: sniglet;
 	}
-	
+
 	.speech-bubble h2 {
 		margin: 0;
 		font-size: 40%;
@@ -63,7 +63,7 @@ input[type="radio"] + label {
 }
 
 input[type="radio"]:checked + label {
-	
+
 }
 
 input[type="radio"]:checked + label:before {
