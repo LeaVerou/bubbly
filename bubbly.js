@@ -1,11 +1,15 @@
 function update() {
 	var side = getRadioValue('side'),
-	    triangle = getRadioValue('triangle');
+		 offset = getRangeValue('offset'),
+	  	offset2 = getRangeValue('offset2'),
+	     triangle = getRadioValue('triangle');
 	    
 	code.textContent = bubbleCSS('.speech-bubble', {
 		side: side,
 		triangle: triangle,
 		size: size.value,
+		offset: offset,
+		offset2: offset2,
 		color: color.value,
 		ems: ems.checked
 	});
@@ -17,6 +21,8 @@ function update() {
 		labelCSS += bubbleCSS('label[for="side-' + value + '"]', {
 			side: value,
 			triangle: triangle,
+			offset: offset,
+			offset2: offset2,
 			size: 8,
 			color: 'yellowgreen'
 		}) + '\n\n';
@@ -26,6 +32,8 @@ function update() {
 		labelCSS += bubbleCSS('label[for="triangle-' + value + '"]', {
 			side: side,
 			triangle: value,
+			offset: offset,
+			offset2: offset2,
 			size: 8,
 			color: 'deeppink'
 		}) + '\n\n';
@@ -54,8 +62,8 @@ function bubbleCSS(selector, settings) {
 	
 	propsBefore['content'] = "''";
 	propsBefore['position'] = 'absolute';
-	propsBefore[side] = '0';
-	propsBefore[offset] = '50%';
+	propsBefore[side] = settings.offset2 + '%';
+	propsBefore[offset] = settings.offset + '%';
 	
 	propsBefore['width'] = '0';
 	propsBefore['height'] = '0';
@@ -95,6 +103,11 @@ function cssRule(selector, props) {
 	css += '}';
 	
 	return css;
+}
+
+function getRangeValue(name) {
+	var ranges = document.getElementsByName(name);
+	return ranges && ranges.length ? ranges[0].value : null;
 }
 
 function getRadioValue(name) {
